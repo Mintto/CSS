@@ -1,0 +1,18 @@
+/* setting */
+*{ margin:0; padding:0; list-style: none; text-decoration: none; box-sizing: border-box; color:inherit; -ms-overflow-style:none; scroll-behavior: smooth;}
+a:hover{ cursor: pointer; }
+::-webkit-scrollbar{display: none;}
+nav{ position:fixed; right: 15px; top:50%; transform: translateY(-50%); }
+nav li{ width: 30px; height: 30px; background:#fff; border-radius: 50%; transition: 0.5s;}
+nav li:not(:first-child){ margin-top:20px; }
+nav li a { display: block; width: 100%; height: 100%; }
+section{ width: 100%; height:100vh; }
+#page1{ background: lightcoral; }
+#page2{ background: lightblue; }
+#page3{ background: lightgreen; }
+#page4{ background: lightgray; }
+
+#page1:target~nav li:nth-child(1),
+#page2:target~nav li:nth-child(2),
+#page3:target~nav li:nth-child(3),
+#page4:target~nav li:nth-child(4){ background:rgba(0,0,0,0.5); }
