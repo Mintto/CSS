@@ -1,0 +1,18 @@
+/* setting */
+*{ margin:0; padding:0; list-style: none; text-decoration: none; box-sizing: border-box; color:inherit; }
+/* popup setting */
+div[id^="popup"]{ position: fixed; left:0; right: 0; top:0; bottom:0; display: flex; justify-content: center; align-items: center; z-index: 1000; visibility: hidden; z-index: -1; opacity: 0; transition: 0.5s;}
+div[id^="popup"] a{ position: absolute; left:0; right: 0; top:0; bottom:0; z-index: -1;}
+div[id^="popup"] img{ width: 500px; height: 750px; object-fit: cover; }
+div[id^="popup"]:target{ visibility: visible; opacity: 1;}
+#popup-a1:target~.popup_list li:nth-child(1)::before,
+#popup-a2:target~.popup_list li:nth-child(2)::before,
+#popup-a3:target~.popup_list li:nth-child(3)::before,
+#popup-a4:target~.popup_list li:nth-child(4)::before{  height: 100%; }
+/* popup_list */
+.popup_list li{ float:left; position: relative; width: 125px; height: 250px; }
+.popup_list li::before{ display: block; position: absolute; content: ""; left:0; top:0; width: 100%; height: 0; transition: 0.5s; background:rgba(0,0,0,0.3);}
+.popup_list li:nth-child(odd){ clear: both; }
+.popup_list li a{ display: block; width: 100%; height: 100%; }
+.popup_list img{ width: 100%; height: 100%; object-fit: cover; }
+
