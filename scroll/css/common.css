@@ -1,7 +1,10 @@
 /* setting */
-*{ margin:0; padding:0; list-style: none; text-decoration: none; box-sizing: border-box; color:inherit; -ms-overflow-style:none; scroll-behavior: smooth;}
+*{ margin:0; padding:0; list-style: none; text-decoration: none; -ms-overflow-style:none; box-sizing: border-box; color:inherit; }
 a:hover{ cursor: pointer; }
+html{ scroll-behavior: smooth; }
 ::-webkit-scrollbar{display: none;}
+
+/* layout */
 nav{ position:fixed; right: 15px; top:50%; transform: translateY(-50%); }
 nav li{ width: 30px; height: 30px; background:#fff; border-radius: 50%; transition: 0.5s;}
 nav li:not(:first-child){ margin-top:20px; }
